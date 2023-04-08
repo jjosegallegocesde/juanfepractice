@@ -1,0 +1,18 @@
+<header>
+    <app-menu></app-menu>
+</header>
+<main class="my-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-5 g-5">
+            <div class="col" *ngFor="let cancion of datos">
+                <div class="card h-100">
+                    
+                    <img src={{cancion.album.images[0].url}} alt="foto" class="img-fluid h-100">
+                    <h4 class="text-center">{{cancion.name}}</h4>
+                    <audio src={{cancion.preview_url}} controls class="w-100"></audio>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</main>
